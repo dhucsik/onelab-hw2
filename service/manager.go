@@ -12,7 +12,7 @@ type Manager struct {
 
 func NewManager(storage *storage.Storage) (*Manager, error) {
 	uSrv := NewUserService(storage)
-	if storage == nil {
+	if storage == nil { // это лучше сделаь 1 строкой
 		return nil, errors.New("no storage provided")
 	}
 

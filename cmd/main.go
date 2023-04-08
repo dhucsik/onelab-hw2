@@ -27,6 +27,7 @@ func run() error {
 		return err
 	}
 
+	// storage пересекается с названием пакета
 	storage, err := storage.New(ctx, conf)
 	if err != nil {
 		log.Fatal(err.Error())
